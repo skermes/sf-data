@@ -93,6 +93,8 @@
        " "
        (cleaned-level "creatureType")
        " "
+       (if (cleaned-level "free") "Free" "")
+       " "
        (s/join " " (map first (cleaned-level "keywords")))))
 
 (defn card-levels->card [levels]
