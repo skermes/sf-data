@@ -2,7 +2,7 @@
 
 A Clojure script to transform Solforge's card data json files into something more suited for easy searching and rendering.
 
-Solforge keeps a bunch of zip files with json data in them that describe all the cards and their abilities.  If I had to guess, I'd say that these files are used to ship card data over the client during patches, and then transformed into some internal representation for the app itself.  In any case, we can use the data for our own purposes.
+Solforge keeps a bunch of zip files with json data in them that describe all the cards and their abilities.  If I had to guess, I'd say that these files are used to ship card data over to the client during patches, and then transformed into some internal representation for the app itself.  In any case, we can use the data for our own purposes.
 
 Solforge stores the records for each level of a card separately.  They look something like this:
 
