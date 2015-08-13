@@ -105,21 +105,12 @@
         (s/join " " (map level-search-text cleaned-levels)))}))
 
 (defn -main [& args]
-  (let [levels (folder->levels test-folder-name)
+  (let [in-dir (or (first args) test-folder-name)
+        out-file (or (second args) test-output-name)
+        levels (folder->levels in-dir)
         indexed-levels (levels-indexed levels)]
     (->> levels
          root-levels
          (map (partial collect-card-levels indexed-levels))
          (map card-levels->card)
-         (cards->file test-output-name))))
-
-; (defn -main [& args]
-;   (let [levels (folder->levels test-folder-name)
-;         indexed-levels (levels-indexed levels)]
-;     (->> levels
-;          root-levels
-;          (map (partial collect-card-levels indexed-levels))
-;          (map card-levels->card)
-;          (map #(get % "cardId"))
-;          (group-by count)
-;          println)))
+         (cards->file out-file))))
