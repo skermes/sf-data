@@ -67,7 +67,8 @@ The `searchText` field is suitable for searching with, for example [sifter](http
 
 ## Installation
 
-Install `[lein](http://leiningen.org/)`.
+Install [lein](http://leiningen.org/).
+
 Run `lein deps`.
 
 ## Usage
